@@ -17,5 +17,9 @@
     "vueify": "~8.5.4"
   },
   "author": "Zhexuan Liu",
-  "license": "Apache version 2.0"
+  "license": "Apache version 2.0",
+  "devDependencies": {
+    "gulp-sass": "^3.1.0",
+    "vueify-extract-css": "^0.2.0"
+  }
 }
