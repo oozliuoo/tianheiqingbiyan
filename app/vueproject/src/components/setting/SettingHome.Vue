@@ -1,14 +1,14 @@
 <template>
-	<div class="create-room-main">
+	<div class="setting-home-main">
 	</div>
 </template>
 
 <script>
-import { labels } from  "../common/labels";
-import language from "../common/lang_code";
+import { labels } from  "../../common/labels";
+import language from "../../common/lang_code";
 
 export default {
-	name: 'create-room',
+	name: 'setting-home',
 	data() {
 		return {
 			// current language used in app

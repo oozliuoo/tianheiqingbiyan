@@ -2,7 +2,7 @@
 	<div class="home-main">
     	<img class="logo" src="../assets/logo.png" />
 		<section class="button-section">
-			<button v-for="button in buttons" class="ui teal button">
+			<button v-for="button in buttons" v-on:click="button.onClick" class="ui teal button">
 				{{ button.label }}
 			</button>
 		</section>
@@ -12,6 +12,7 @@
 <script>
 import { labels } from  "../common/labels";
 import language from "../common/lang_code";
+import router from '../router'
 
 export default {
 	name: 'home',
@@ -25,12 +26,32 @@ export default {
 		// Metadata for buttons on this page
 		buttons: function() {
 			return [
-				{ label: labels[this.currentLang].CREATE_ROOM },
-				{ label: labels[this.currentLang].JOIN_ROOM },
-				{ label: labels[this.currentLang].PERSONAL_SETTINGS }, 
+				{ 
+					label: labels[this.currentLang].CREATE_ROOM,
+					onClick: function(){
+						router.push({ path: 'create-room' });
+					},
+				},
+				{ 
+					label: labels[this.currentLang].JOIN_ROOM,
+					onClick: function(){
+						router.push({ path: 'join-room' });
+					},
+				},
+				{ 
+					label: labels[this.currentLang].PERSONAL_SETTINGS,
+					onClick: function(){
+						router.push({ path: 'settings' });
+					},
+				}, 
 			];
 		},
-	}
+	},
+	methods: {
+		createRoomOnClick: function(event) {
+
+		},
+	},
 }
 </script>
 

@@ -1,6 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
+// home module
 import Home from '@/components/Home'
+
+// game related modules
+import CreateRoom from '@/components/game/CreateRoom'
+import JoinRoom from '@/components/game/JoinRoom'
+
+// setting related modules
+import SettingHome from '@/components/setting/SettingHome'
 
 Vue.use(Router)
 
@@ -15,6 +24,16 @@ export default new Router({
 			path: '/create-room/',
 			name: "CreateRoom",
 			component: CreateRoom,
+		},
+		{
+			path: '/join-room/',
+			name: "JoinRoom",
+			component: JoinRoom,
+		},
+		{
+			path: '/settings/',
+			name: "SettingHome",
+			component: SettingHome,
 		},
 	]
 })
