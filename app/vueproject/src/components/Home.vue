@@ -2,7 +2,7 @@
 	<div class="home-main">
     	<img class="logo" src="../assets/logo.png" />
 		<section class="button-section">
-			<button v-for="button in buttons" v-on:click="button.onClick" class="ui teal button">
+			<button v-for="button in buttons" v-on:touchstart="button.onClick" v-on:click="button.onClick"c class="ui teal button">
 				{{ button.label }}
 			</button>
 		</section>
