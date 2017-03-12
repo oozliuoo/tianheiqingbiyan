@@ -2,12 +2,13 @@
 
 This repo is aiming at delivering cross-platform solution (ios, android and web) for this app
 
-## Framework and tech stack
-1. Cordova
-2. Vue.js
-3. Semantic UI
+## Framework and library used
+1. [Cordova](https://cordova.apache.org/)
+2. [Vue.js](https://vuejs.org/)
+3. [Semantic UI](https://semantic-ui.com)
 4. Build Tools: gulp, webpack
-5. Node.js
+5. [Node.js](https://nodejs.org/en/)
+6. [Scss](http://sass-lang.com/)
 
 ## Get Started
 1. Clone the reporsitory
