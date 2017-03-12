@@ -1,0 +1,3 @@
+# ignore all files under www/ and platforms/, since they are genrated per client
+app/www/
+app/platforms/
