@@ -22,7 +22,7 @@ function arrayContains(arr, value) {
  */
 function onTouchStart(event) {
     const target = event.target;
-    $(target).click();
+    $(target).find("input").click();
 }
 
 export {

@@ -5,10 +5,12 @@ const labels = {
     "zh-cn": {
         CAN_SELF_RESCUE: "自救",
         CAN_USE_BOTH_POTION: "双开",
+        CREATE: "创建",
         CREATE_ROOM: "创建房间",
         CUPID: "丘比特",
 
         DIVINES: "神民",
+        DAEMON: "恶魔",
 
         FORTUNE_TELLER: "预言家",
 
@@ -25,7 +27,6 @@ const labels = {
         SAVIOR: "守卫",
         SHERIFF: "警长",
         SILENCER: "禁言长老",
-        SNEAK: "潜行者",
 
         THIEF: "盗贼",
         TOWN_FOLKS: "村民",
@@ -40,10 +41,12 @@ const labels = {
     "en": {
         CAN_SELF_RESCUE: "Can Self Rescue",
         CAN_USE_BOTH_POTION: "Can Use Both Potion",
+        CREATE: "Create",
         CREATE_ROOM: "Create Room",
         CUPID: "Cupid",
 
         DIVINES: "Divines",
+        DAEMON: "Daemon",
 
         FORTUNE_TELLER: "Fortune Teller",
 
@@ -60,7 +63,6 @@ const labels = {
         SAVIOR: "Savior",
         SHERIFF: "Sheriff",
         SILENCER: "Silencer",
-        SNEADK: "Sneak",
 
         THIEF: "Thief",
         TOWN_FOLKS: "Town Folks",

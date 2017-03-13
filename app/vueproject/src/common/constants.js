@@ -6,13 +6,18 @@ const constants = {
     CAN_USE_BOTH_POTION_VALUE: "both_potion",
     CUPID_VALUE: "cupid",
 
+    DAEMON_VALUE: "daemon",
+
     FORTUNE_TELLER_VALUE: "fortuneteller",
 
     HUNTER_VALUE: "hunter",
 
+    NUM_OF_WOLF_CHAR: 3,
+
     SAVIOR_VALUE: "savior",
+    SERVER_ROOT: "http://ec2-54-202-83-5.us-west-2.compute.amazonaws.com:8080/",
+    SERVER_CREATE_GAME_PATH: "createGame",
     SILENCER_VALUE: "silencer",
-    SNEAK_VALUE: "sneak",
 
     THIEF_VALUE: "thief",
     
