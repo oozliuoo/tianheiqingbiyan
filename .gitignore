@@ -2,3 +2,4 @@
 app/www/
 app/platforms/
 *.DS_Store
+node_modules/
