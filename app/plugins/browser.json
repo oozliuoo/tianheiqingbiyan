@@ -9,6 +9,12 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.aws.app"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.aws.app"
+        },
+        "cordova-plugin-keyboard": {
+            "PACKAGE_NAME": "com.aws.app"
         }
     },
     "dependent_plugins": {}

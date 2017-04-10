@@ -12,6 +12,9 @@ const labels = {
         DIVINES: "神民",
         DAEMON: "恶魔",
 
+        EMPTY_SEAT: "空座",
+        ENTER_ROOM_ID: "请输入房间号",
+
         FORTUNE_TELLER: "预言家",
 
         HIDDEN_WOLF: "隐狼",
@@ -20,6 +23,8 @@ const labels = {
         JOIN_ROOM: "进入房间",
 
         OTHERS: "其他",
+
+        ROOM_ID: "房间号",
 
         PERSONAL_SETTINGS: "个人设置",
         PLAYER_CONFIG: "游戏配置",
@@ -48,6 +53,9 @@ const labels = {
         DIVINES: "Divines",
         DAEMON: "Daemon",
 
+        EMPTY_SEAT: "Empty",
+        ENTER_ROOM_ID: "Please enter room ID",
+
         FORTUNE_TELLER: "Fortune Teller",
 
         HIDDEN_WOLF: "Hidden Wolf",
@@ -56,6 +64,8 @@ const labels = {
         JOIN_ROOM: "Join Room",
         
         OTHERS: "Others",
+
+        ROOM_ID: "Room Id",
 
         PERSONAL_SETTINGS: "Personal Settings",
         PLAYER_CONFIG: "Game Settings",

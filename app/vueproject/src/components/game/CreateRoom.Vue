@@ -174,6 +174,7 @@ import { labels } from  "../../common/labels";
 import language from "../../common/lang_code";
 import { constants } from "../../common/constants";
 import * as utils from "../../common/utils";
+import router from '../../router';
 
 export default {
 	name: 'create-room',
@@ -248,7 +249,14 @@ export default {
 			};
 		},
 		totalPlayer: function() {
-			return this.numOfTownFolks + this.numOfWolves + this.wolves.length + this.divines.length + this.others.length;
+			const hasThief = this.utils.arrayContains(this.others, this.constants.THIEF_VALUE)
+			const plainCount = this.numOfTownFolks + this.numOfWolves + this.wolves.length + this.divines.length + this.others.length;
+
+			if (hasThief) {
+				return plainCount - 2;
+			} else {
+				return plainCount;
+			}
 		},
 	},
 	methods: {
@@ -300,14 +308,19 @@ export default {
 		 */
 		createRoom: function() {
 			this.$http.post(
-				"http://ec2-54-202-83-5.us-west-2.compute.amazonaws.com:8080/createGame",
+				constants.SERVER_ROOT + constants.SERVER_CREATE_GAME_PATH,
 				this.gameMetadata,
 			).then(
 			(response) => {
-				console.log(response);
+				if (response.status == 200) {
+					router.push({ path: 'main', query: { roomId: response.body, isHost: true, totalPlayer: this.totalPlayer } });
+				}
 			},
 			(response) => {
+				// TODO: need error modal dialog and remove the fake navigate
 				console.log(response);
+				// fake navigation
+				router.push({ path: 'main', query: { roomId: 1001, isHost: true, totalPlayer: this.totalPlayer } });
 			});
 		},
 	}
@@ -319,64 +332,67 @@ export default {
 
 .create-room-main {
 	margin-top: 40px !important;
-}
 
-.divider::before, .divider::after {
-	top: 0 !important;
-	padding-bottom: 0;
-}
-
-.common-char-button {
-	margin: 0 !important;
-	float: left !important;
-	width: 28.5714%;
-	text-align: center;
-	padding-left: 0 !important;
-	padding-right: 0 !important;
-	
-	i {
-		margin: 0 !important;		
+	.divider::before, .divider::after {
+		top: 0 !important;
+		padding-bottom: 0;
 	}
-}
 
-.common-char-num {
-	width: 42.8571%;
-	float: left !important;
-}
-
-.common-char-label, .common-char-num {
-	line-height: 36px;
-	vertical-align: middle;
-	text-align: center !important;
-}
-
-.wolf-character, .thief {
-	text-align: center !important;
-}
-
-.row {
-	padding-bottom: 0rem !important;
-	padding-top: 0.5rem !important;
-	line-height: 3.4285rem !important;
-}
-
-.create-button {
-	text-align: right !important;
-	padding: 0 !important;
-}
-
-header.row {
-	font-size: 1.25rem;
-	padding-top: 1.75rem !important;
-	padding-bottom: 0rem !important;
-
-	i {
-		font-size: 2rem;
+	.common-char-button {
+		margin: 0 !important;
+		float: left !important;
+		width: 28.5714%;
+		text-align: center;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		
+		i {
+			margin: 0 !important;		
+		}
 	}
-}
 
-.fourteen.wide.column {
-	padding-bottom: .5rem !important;
+	.common-char-num {
+		width: 42.8571%;
+		float: left !important;
+	}
+
+	.common-char-label, .common-char-num {
+		line-height: 36px;
+		vertical-align: middle;
+		text-align: center !important;
+	}
+
+	.wolf-character, .thief {
+		text-align: center !important;
+	}
+
+	.row {
+		padding-bottom: 0rem !important;
+		padding-top: 0.5rem !important;
+		line-height: 3.4285rem !important;
+	}
+
+	.header-back-btn {
+		text-align: left !important;
+	}
+
+	.create-button {
+		text-align: right !important;
+	}
+
+	header.row {
+		font-size: 1.25rem;
+		padding-top: 1.75rem !important;
+		padding-bottom: 0rem !important;
+
+		i {
+			font-size: 2rem;
+		}
+	}
+
+	.fourteen.wide.column {
+		padding-bottom: .5rem !important;
+	}
 }
 
 </style>

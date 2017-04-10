@@ -15,8 +15,9 @@ const constants = {
     NUM_OF_WOLF_CHAR: 3,
 
     SAVIOR_VALUE: "savior",
-    SERVER_ROOT: "http://ec2-54-202-83-5.us-west-2.compute.amazonaws.com:8080/",
     SERVER_CREATE_GAME_PATH: "createGame",
+    SERVER_JOIN_ROOM_PATH: "joinRoom",
+    SERVER_ROOT: "http://ec2-54-202-83-5.us-west-2.compute.amazonaws.com:8080/",
     SILENCER_VALUE: "silencer",
 
     THIEF_VALUE: "thief",

@@ -7,6 +7,7 @@ import Home from '@/components/Home'
 // game related modules
 import CreateRoom from '@/components/game/CreateRoom'
 import JoinRoom from '@/components/game/JoinRoom'
+import Main from '@/components/game/Main'
 
 // setting related modules
 import SettingHome from '@/components/setting/SettingHome'
@@ -29,6 +30,11 @@ export default new Router({
 			path: '/join-room/',
 			name: "JoinRoom",
 			component: JoinRoom,
+		},
+		{
+			path: '/main/',
+			name: "Main",
+			component: Main,
 		},
 		{
 			path: '/settings/',

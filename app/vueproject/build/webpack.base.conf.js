@@ -25,6 +25,7 @@ module.exports = {
       '@': resolve('src'),
     }
   },
+  devtool: "source-map",
   module: {
     rules: [
       {

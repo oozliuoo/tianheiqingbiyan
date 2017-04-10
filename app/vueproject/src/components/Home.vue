@@ -35,7 +35,7 @@ export default {
 				{ 
 					label: labels[this.currentLang].JOIN_ROOM,
 					onClick: function(){
-						router.push({ path: 'join-room' });
+					router.push({ path: 'join-room', query: { isHost: false } });
 					},
 				},
 				{ 
